@@ -33,13 +33,13 @@ function getTemp() {
 
 function checkTemp() {
  var temp = getTemp();
- 
+ storeServioticy(temp);
 }
 
 onInit();
 
 
-function storeServioticy(a) {
+function storeServioticy(temperatureC) {
     content = '{"channels": {"temperature": {"current-value": "'+temperatureC+'"}},"lastUpdate": '+new Date().getTime()+'}';
     var options = {
       host: 'api.servioticy.com',
